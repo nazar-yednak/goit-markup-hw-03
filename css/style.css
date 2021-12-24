@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 0 ;
   font-family: Roboto, sans-serif;
 }
 h1,
@@ -10,7 +10,8 @@ h5,
 h6,
 p,
 ul {
-  margin: 0;
+  margin: 0px;
+  padding: 0px;
 }
 img {
   display: block;
@@ -35,12 +36,30 @@ img {
 .container {
   width: 1200px;
   outline: 3px solid tomato;
-  margin: 0 auto;
+  
+padding-left: 15px;
+padding-right: 15px;
+margin: 0 auto;
+}
+.section {
+  outline: 3px solid teal;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .page-heder {
+  border-bottom: 1px solid #ececec;
+}
+.main-nav {
+  display: flex;
+
+  align-items: center;
 }
 .logo {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin-right: 93px;
   text-decoration: none;
   font-family: Raleway;
   font-style: normal;
@@ -59,7 +78,18 @@ img {
   letter-spacing: 0.03em;
   color: var(--accent-color);
 }
+.site-nav {
+  display: flex;
+}
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+}
+
 .site-nav .link {
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -75,6 +105,13 @@ img {
   letter-spacing: 0.02em;
   color: var(--accent-color);
 }
+.auth-nav {
+  display: flex;
+  margin-left: auto;
+}
+.auth-nav .item + .item {
+  margin-left: 50px;
+}
 .auth-nav .link {
   font-size: 14px;
   line-height: 1.14;
@@ -89,27 +126,40 @@ img {
   color: var(--accent-color);
 }
 /* Hero*/
+.hero {
+ 
+}
 .section-hero {
   background-color: var(--title-text-color);
   text-align: center;
 }
 .section-hero .title {
-  font-weight: 900;
+  margin-top: 200px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto; 
+   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
+  width: 696px;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--second-accent-color);
 }
+.btn {
+  margin-bottom: 250px;
+}
 .section-hero .btn {
-  font-weight: 700;
+  
+    font-weight: 700;
   font-size: 16;
   line-height: 1.87;
   letter-spacing: 0.06em;
   color: var(--second-accent-color);
   background-color: var(--prymary-bg-color);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 4px;
 }
 
 /* Особливості*/
@@ -122,6 +172,14 @@ img {
   text-transform: uppercase;
   color: var(--prymary-text-color);
 }
+.feature-list{
+  display: flex;
+  
+}
+.feature-list .item:not(:last-child)
+{
+  margin-left: 30px;
+}
 
 .feature .text {
   font-size: 14px;
@@ -132,6 +190,7 @@ img {
 
 /*Секція рід заннятть по фото*/
 .work .title {
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -139,12 +198,17 @@ img {
   letter-spacing: 0.03em;
   color: var(--prymary-text-color);
 }
+.work-list{
+  display: flex;
+  justify-content: space-between;
+}
 
 /*Наша команда*/
 .team {
   background-color: #f5f4fa;
 }
 .team-title {
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -167,6 +231,21 @@ img {
 
   color: var(--title-text-color);
 }
+.team-list{
+  display: flex;
+  justify-content: space-between;
+}
+.team-img{
+  margin-bottom: 30px;
+}
+.team-list .title{
+ margin-bottom: 10px;
+
+}
+.team-list .text{
+ margin-bottom: 30px;
+}
+
 
 /*Портфоліо*/
 
@@ -233,7 +312,11 @@ footer {
   background-color: #2f303a;
 }
 .footers {
+  margin-top: 60px;
   color: var(--second-accent-color);
+
+}
+
 }
 .logo-s .address .link {
   font-family: Roboto;
@@ -250,4 +333,13 @@ footer {
 .address .link:hover,
 .address .link:focus {
   color: var(--accent-color);
+}
+.address-link{
+  margin-top: 10px;
+}
+.address-link .item:not(:last-child){
+  margin-bottom: 9px;
+}
+.address-link .item:last-child{
+  margin-bottom: 45px;
 }
